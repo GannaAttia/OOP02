@@ -103,6 +103,27 @@ namespace OOP02
             }
             return false;
         }
+
+
+        public void PrintAllShipments()
+        {
+            Console.WriteLine($"Shipments in {CenterName}:");
+            for (int i = 0; i < shipments.Length; i++)
+            {
+                Shipment shipment = shipments[i];
+                if (shipment != null)
+                {
+                    Console.WriteLine($"Shipment {i + 1}:");
+                    Console.WriteLine($"Tracking Code: {shipment.TrackingCode}");
+                    Console.WriteLine($"Description: {shipment.Description}");
+                    Console.WriteLine($"Weight: {shipment.Weight} kg");
+                    Console.WriteLine($"Delivery Fee: ${shipment.DeliveryFee}");
+                    Console.WriteLine($"Destination: {shipment.Destination}");
+                    Console.WriteLine($"Estimated Cost: ${shipment.EstimatedCost}");
+                    Console.WriteLine();
+                }
+            }
+        }
         #endregion
     }
 }
