@@ -8,8 +8,27 @@ namespace OOP02
 {
     internal class DeliveryCenter
     {
+
+
+        #region DeliveryCenter
+        private string centerName = default!;
+
+        public string CenterName
+        {
+            get { return centerName; }
+            set
+            { 
+                if(!string.IsNullOrWhiteSpace(value))
+                {
+                    centerName = value;
+                }
+            }
+        }
+
+        #endregion
+
         //1-he DeliveryCenter class should store up to 10 shipments using a private Shipment array.
-        private Shipment[] shipments = new Shipment[10];
+        private Shipment[] shipments = new Shipment[20];
         //2- Add an integer indexer this[int index] to get or set a shipment by position.
         //3- If the integer index is invalid, the getter returns null and the setter does nothing.
 
@@ -55,6 +74,9 @@ namespace OOP02
 
         // 6- Add bool AddShipment(Shipment shipment), which adds the shipment to the first empty position and returns true.
         // 7-Return false when the center is full.
+
+        #region Methods 
+
         public bool AddShipment(Shipment shipment)
         {
             for (int i = 0; i < shipments.Length; i++)
@@ -67,5 +89,20 @@ namespace OOP02
             }
             return false;
         }
+
+        public bool RemoveShipment(string trackingCode)
+        {
+            for (int i = 0; i < shipments.Length; i++)
+            {
+                Shipment shipment = shipments[i];
+                if (shipment != null && shipment.TrackingCode == trackingCode)
+                {
+                    shipments[i] = null;
+                    return true;
+                }
+            }
+            return false;
+        }
+        #endregion
     }
 }
