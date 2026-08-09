@@ -10,9 +10,14 @@ namespace OOP02
     {
         #region StandardShipment
 
-        StandardShipment(string trackingCode, string description, double weight, double deliveryFee, DeliveryAddress destination)
+        public StandardShipment(string trackingCode, string description, double weight, double deliveryFee, DeliveryAddress destination)
             : base(trackingCode, description, weight, deliveryFee, destination)
         {
+        }
+
+        public override void PrintShipment()
+        {
+            base.PrintShipment();
         }
         #endregion 
     }

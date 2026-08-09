@@ -168,7 +168,7 @@ namespace OOP02
 
         // B)PrintShipment(): prints all shipment information, including the estimated cost.
 
-        public void PrintShipment()
+        public virtual void PrintShipment()
         {
             Console.WriteLine($"Tracking Code: {TrackingCode}");
             Console.WriteLine($"Description: {Description}");

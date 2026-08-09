@@ -46,6 +46,14 @@ namespace OOP02
             DestinationCountry = destinationCountry;
             CustomsFee = customsFee;
         }
+
+        public override void PrintShipment()
+        {
+            
+            base.PrintShipment();
+            Console.WriteLine($"Destination Country: {DestinationCountry}");
+            Console.WriteLine($"Customs Fee: {CustomsFee:C}");
+        }
         #endregion
     }
 }
