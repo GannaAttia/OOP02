@@ -127,7 +127,7 @@ namespace OOP02
 
         // f) EstimatedCost: calculated property that returns DeliveryFee + (Weight * 5).
 
-        public double EstimatedCost => DeliveryFee + (Weight * 5);
+        public virtual decimal EstimatedCost => DeliveryFee + (Weight * 5);
         #endregion
 
 
