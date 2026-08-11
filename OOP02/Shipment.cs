@@ -127,7 +127,6 @@ namespace OOP02
 
         // f) EstimatedCost: calculated property that returns DeliveryFee + (Weight * 5).
 
-        public virtual decimal EstimatedCost => (decimal)(DeliveryFee + (Weight * 5));
         #endregion
 
 
@@ -168,6 +167,18 @@ namespace OOP02
 
         // B)PrintShipment(): prints all shipment information, including the estimated cost.
 
+
+
+        #endregion
+
+
+        // Assignment 03
+
+        #region 1-Update the Shipment Class
+        //EstimatedCost : Convert to a virtual property so each derived class can calculate its own cost.
+
+        public virtual decimal EstimatedCost => (decimal)(DeliveryFee + (Weight * 5));
+
         public virtual void PrintShipment()
         {
             Console.WriteLine($"Tracking Code: {TrackingCode}");
@@ -177,7 +188,6 @@ namespace OOP02
             Console.WriteLine($"Destination: {Destination.GetFullAddress()}");
             Console.WriteLine($"Estimated Cost: {EstimatedCost} EGP");
         }
-
         #endregion
     }
 }

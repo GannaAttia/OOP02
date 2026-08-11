@@ -20,6 +20,7 @@
             //Static Binding (also known as early binding) occurs at compile time, where the method to be called is determined based on the reference type of the object.
             //Dynamic Binding (also known as late binding) occurs at runtime, where the method to be called is determined based on the actual object type.
             #endregion
+
             #region Q2: Sealed Classes and Methods
             // a) What is the purpose of the sealed keyword when applied to a class?
 
