@@ -173,11 +173,14 @@ namespace OOP02
 
 
         // Assignment 03
-
-        #region 1-Update the Shipment Class
+        //1-Update the Shipment Class
+        #region Convert EstimatedCost to a virtual 
         //EstimatedCost : Convert to a virtual property so each derived class can calculate its own cost.
 
         public virtual decimal EstimatedCost => (decimal)(DeliveryFee + (Weight * 5));
+        #endregion
+
+        #region Convert PrintShipment Method to a virtual 
 
         public virtual void PrintShipment()
         {
@@ -187,6 +190,18 @@ namespace OOP02
             Console.WriteLine($"Delivery Fee: {DeliveryFee} EGP");
             Console.WriteLine($"Destination: {Destination.GetFullAddress()}");
             Console.WriteLine($"Estimated Cost: {EstimatedCost} EGP");
+        }
+        #endregion
+
+        #region Weight Update Method
+        public void UpdateWeight(double newWeight) 
+        { 
+            Weight = newWeight;
+        }
+
+        public void UpdateWeight(double baseWeight , double extraPackingWeight) 
+        {
+            Weight = baseWeight + extraPackingWeight;
         }
         #endregion
     }
