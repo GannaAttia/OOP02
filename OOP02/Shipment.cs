@@ -204,5 +204,9 @@ namespace OOP02
             Weight = baseWeight + extraPackingWeight;
         }
         #endregion
+
+        #region 2-Constructor Chaining
+
+        #endregion
     }
 }
