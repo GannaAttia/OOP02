@@ -4,6 +4,28 @@
     {
         static void Main(string[] args)
         {
+
+            // Assignment OOP03
+            #region Q1:Overloading, Overriding, and Binding
+            // a)What is the difference between Method Overloading and Method Overriding?
+
+            //OverLoading is a compile-time polymorphism where multiple methods have the same name but different parameters (type, number, or order).
+            //It allows you to define multiple versions of a method to handle different types of input.
+
+            //Overriding is a runtime polymorphism where a derived class provides a specific
+            //implementation of a method that is already defined in its base class.
+
+            // b)What is the difference between Static Binding and Dynamic Binding?
+
+            //Static Binding (also known as early binding) occurs at compile time, where the method to be called is determined based on the reference type of the object.
+            //Dynamic Binding (also known as late binding) occurs at runtime, where the method to be called is determined based on the actual object type.
+            #endregion
+
+            
+            #endregion
+
+
+
             #region Q1:
             //a) What is the difference between a class and a struct?
             // A class is a reference type, while a struct is a value type.
@@ -37,7 +59,7 @@
 
             #region Q5:
             // 1- Create a DeliveryCenter
-                DeliveryCenter deliveryCenter = new DeliveryCenter();
+            DeliveryCenter deliveryCenter = new DeliveryCenter();
             // 2- Ask the user to enter the name of the delivery center 
                 Console.Write("Enter the name of the delivery center: ");
                 deliveryCenter.CenterName = Console.ReadLine();
