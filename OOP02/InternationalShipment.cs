@@ -55,5 +55,19 @@ namespace OOP02
             Console.WriteLine($"Customs Fee: {CustomsFee:C}");
         }
         #endregion
+        #region GenerateReport
+        public virtual void GenerateCustomReport()
+        {
+            Console.WriteLine("International Shipment Report");
+            Console.WriteLine($"Tracking Code: {TrackingCode}");
+            Console.WriteLine($"Description: {Description}");
+            Console.WriteLine($"Weight: {Weight} kg");
+            Console.WriteLine($"Delivery Fee: {DeliveryFee:C}");
+            Console.WriteLine($"Destination Address: {Destination}");
+            Console.WriteLine($"Destination Country: {DestinationCountry}");
+            Console.WriteLine($"Customs Fee: {CustomsFee:C}");
+            Console.WriteLine($"Estimated Cost: {EstimatedCost:C}");
+        }
+        #endregion
     }
 }

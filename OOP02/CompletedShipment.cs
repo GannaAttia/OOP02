@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OOP02
 {
-    internal class CompletedShipment : Shipment
+    internal sealed class CompletedShipment : Shipment
     {
         public CompletedShipment(string trackingCode, string description, double weight, double deliveryFee, DeliveryAddress destination)
             : base(trackingCode, description, weight, deliveryFee, destination)
