@@ -19,6 +19,8 @@ namespace OOP02
         {
             base.PrintShipment();
         }
+
+        public override decimal EstimatedCost => (decimal)(DeliveryFee + (Weight * 5));
         #endregion 
     }
 }

@@ -25,7 +25,7 @@ namespace OOP02
 
         public override decimal EstimatedCost
         {
-            get { return (decimal)base.EstimatedCost + extraFee; }
+            get { return base.EstimatedCost + ExtraFee; }
         }
 
         public ExpressShipment(string trackingCode, string description, double weight, double deliveryFee, DeliveryAddress destination, decimal extraFee)
@@ -39,6 +39,7 @@ namespace OOP02
             base.PrintShipment();
             Console.WriteLine($"Extra Fee: {ExtraFee:C}");
         }
+
         #endregion
     }
 }
