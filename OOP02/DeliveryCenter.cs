@@ -13,6 +13,8 @@ namespace OOP02
         #region DeliveryCenter
         private string centerName = default!;
 
+        public Driver Driver { get; set; }
+
         public string CenterName
         {
             get { return centerName; }

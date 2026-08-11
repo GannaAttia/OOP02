@@ -13,6 +13,7 @@ namespace OOP02
         private double weight;
         private double deliveryFee;
         private DeliveryAddress destination;
+
         #region Q4) :Apply proper encapsulation using private fields and public properties with the following rules:
         // a)TrackingCode cannot be null, empty, or whitespace.
         //public string TrackingCode
