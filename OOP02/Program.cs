@@ -20,8 +20,22 @@
             //Static Binding (also known as early binding) occurs at compile time, where the method to be called is determined based on the reference type of the object.
             //Dynamic Binding (also known as late binding) occurs at runtime, where the method to be called is determined based on the actual object type.
             #endregion
+            #region Q2: Sealed Classes and Methods
+            // a) What is the purpose of the sealed keyword when applied to a class?
 
-            
+            // The sealed keyword is used to prevent a class from being inherited.
+            // When a class is marked as sealed, it cannot serve as a base class for any other class.
+
+            // b) What is the difference between a sealed class and a sealed method?
+
+            // A sealed class is a class that cannot be inherited,
+            // while a sealed method is a method that cannot be overridden in derived classes.
+
+            // c) Can a sealed method be overridden? Why?
+            // No, a sealed method cannot be overridden because it is explicitly marked as sealed
+
+
+
             #endregion
 
 
