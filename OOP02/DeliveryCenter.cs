@@ -108,16 +108,23 @@ namespace OOP02
 
         public void PrintAllShipments()
         {
-            Console.WriteLine("======================================");
-            Console.WriteLine($"Delivery Center : {CenterName}");
-            Console.WriteLine("======================================");
+            Console.WriteLine("========================================");
+            Console.WriteLine("Delivery Center");
+            Console.WriteLine("========================================\n");
+
+            if (Driver != null)
+            {
+                Console.WriteLine($"Driver : {Driver.FullName}\n");
+            }
+
+            Console.WriteLine("----------------------------------------\n");
 
             for (int i = 0; i < shipments.Length; i++)
             {
                 if (shipments[i] != null)
                 {
                     shipments[i].PrintShipment();
-                    Console.WriteLine("--------------------------------------");
+                    Console.WriteLine("\n----------------------------------------\n");
                 }
             }
         }
